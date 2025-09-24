@@ -1,0 +1,131 @@
+@import url('@vuepress-reco/tailwindcss-config/lib/client/styles/tailwindcss-base.css');
+/* 
+
+.navbar-container .social-links {
+  display: none !important;
+}
+
+
+.navbar-container .navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  
+}
+
+.navbar-container .navbar-links-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar-container .navbar-links .btn-toggle-dark-mode {
+  margin-left: auto;
+} */
+
+
+
+
+
+
+.banner-brand__wrapper {
+  position: relative;
+  overflow: hidden; /* 避免伪元素放大溢出 */
+}
+
+/* 背景图放到 ::before 上，单独模糊 */
+.banner-brand__wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/bg.svg") center center / cover no-repeat;
+  
+  filter: blur(5px);     /* 模糊半径，自己调，比如 8px/20px/40px */
+  transform: scale(1.05); /* 模糊会产生边缘透明，稍微放大避免黑边 */
+  
+  z-index: 0;             /* 放在内容后面 */
+}
+
+/* 让正文内容盖在伪元素之上 */
+.banner-brand__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* 创建一个 keyframes 动画 */
+@keyframes blurOnce {
+  0% {
+    filter: blur(9px);
+  }
+  10% {
+    filter: blur(6px);
+  }
+  20% {
+    filter: blur(3px);
+  }
+  30% {
+    filter: blur(1px);
+  }
+  40% {
+    filter: blur(3px);
+  }
+  50% {
+    filter: blur(6px);
+  }
+  60% {
+    filter: blur(9px);
+  }
+  70% {
+    filter: blur(12px);
+  }
+  80% {
+    filter: blur(9px);
+  }
+  90% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+  
+}
+
+/* 应用动画 */
+.banner-brand__wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/bg.svg") center center / cover no-repeat;
+  animation: blurOnce 20s forwards;  /* 10秒内循环模糊效果 */
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 调整文字大小 */
+.banner-brand__content .title{
+  font-size: 20px !important;
+  
+}
+.banner-brand__content .description {
+  font-size: 100px !important;   /* 描述文字缩小 */
+  margin-top: 10px;
+}
+.banner-brand__content .tagline {
+  font-size: 20px;   /* 更小的副标题 */
+  margin-top: 80px;
+  margin-left: 600px;
+  opacity: 0.85;     /* 稍微淡一点 */
+}
