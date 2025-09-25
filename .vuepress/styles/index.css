@@ -4,15 +4,11 @@
 .navbar-container .social-links {
   display: none !important;
 }
-
-
 .navbar-container .navbar-inner {
   display: flex;
   justify-content: space-between;
   align-items: left;
-  
 }
-
 .navbar-container .navbar-links-wrapper {
   flex: 1;
   display: flex;
@@ -22,35 +18,27 @@
   margin-left: auto;
 } */
 
+body {
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif !important;
+}
 
 
 
 
 
 .banner-brand__wrapper {
-  
   position: relative;
   overflow: hidden; /* 避免伪元素放大溢出 */
 }
 
-/* 背景图放到 ::before 上，单独模糊 */
+/* 应用动画 */
 .banner-brand__wrapper::before {
-  /* margin-top: 80px; */
   content: "";
   position: absolute;
   inset: 0;
   background: url("/bg.svg") center center / cover no-repeat;
-  
-  filter: blur(5px);     /* 模糊半径，自己调，比如 8px/20px/40px */
-  transform: scale(1.05); /* 模糊会产生边缘透明，稍微放大避免黑边 */
-  
-  z-index: 0;             /* 放在内容后面 */
-}
-
-/* 让正文内容盖在伪元素之上 */
-.banner-brand__content {
-  position: relative;
-  z-index: 1;
+  animation: blurOnce 20s forwards;  /* 20秒内循环模糊效果 */
+  z-index: 0;
 }
 
 /* 创建一个 keyframes 动画 */
@@ -91,15 +79,6 @@
   
 }
 
-/* 应用动画 */
-.banner-brand__wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("/bg.svg") center center / cover no-repeat;
-  animation: blurOnce 20s forwards;  /* 10秒内循环模糊效果 */
-  z-index: 0;
-}
 
 
 

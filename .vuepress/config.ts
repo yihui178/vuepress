@@ -4,15 +4,20 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
-  title: "忆回",
+  head: [
+    ['link', { rel: 'icon', href: '/YihuiLogo.ico' }] // 这里的路径是指向 public 目录下的文件
+  ],
+  title: "忆\u200C回",
   description: "Just playing around",
   bundler: viteBundler(),
   // bundler: webpackBundler(),
+  
   theme: recoTheme({
+    
     
 
     logo: "/YihuiLogo.png",
-    author: "忆回",
+    author: " 忆\uFEFF回",
     authorAvatar: "/lqxhead.png",
 
     docsRepo: "https://github.com/yihui178/vuepress",
@@ -30,26 +35,30 @@ export default defineUserConfig({
     series: {
       "/docs/theme-reco/": [
         {
-          text: "module one",
-          children: ["home", "theme"],
+          text: "练习",
+          children: [
+            "test/doker/docker",
+            "test/git/git",
+            "test/nvm/README1", 
+            "test/springboot/springboot"],
         },
 
         {
-          text: "module two",
-          children: ["api", "plugin"], 
+          text: "模块",
+          children: ["home", "theme","api", "plugin"], 
         },
       ],
     },
     navbar: [
       { text: "主页", link: "/"},
       { text: "时间轴", link: "/timeline.html" },
-      { text: "测试", link: "/categories/test/1.html"},
+      { text: "测试", link: "/categories/lianxi/1.html"},
       { text: "标签", link: "/tags/nvm/1.html"},
       {
-        text: "1",
+        text: "练习",
         children: [
-          { text: "1", link: "/docs/theme-reco/theme" },
-          { text: "2", link: "/blogs/other/guide" },
+          { text: "测试", link: "/docs/theme-reco/theme" },
+          { text: "关于", link: "/blogs/other/guide" },
         ],
       }  
     ],
