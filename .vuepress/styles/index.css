@@ -28,12 +28,14 @@
 
 
 .banner-brand__wrapper {
+  
   position: relative;
   overflow: hidden; /* 避免伪元素放大溢出 */
 }
 
 /* 背景图放到 ::before 上，单独模糊 */
 .banner-brand__wrapper::before {
+  /* margin-top: 80px; */
   content: "";
   position: absolute;
   inset: 0;
@@ -129,3 +131,6 @@
   margin-left: 600px;
   opacity: 0.85;     /* 稍微淡一点 */
 }
+
+
+

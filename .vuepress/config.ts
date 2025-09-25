@@ -9,6 +9,8 @@ export default defineUserConfig({
   bundler: viteBundler(),
   // bundler: webpackBundler(),
   theme: recoTheme({
+    
+
     logo: "/YihuiLogo.png",
     author: "忆回",
     authorAvatar: "/lqxhead.png",
