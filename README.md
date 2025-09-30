@@ -7,6 +7,7 @@ modules:
   - MdContent
   - Footer
 bannerBrand:
+
   bgImage: 
   # bgImage: '/lqxhead.svg'
   title: 

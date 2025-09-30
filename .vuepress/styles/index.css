@@ -27,6 +27,7 @@ body {
 
 
 .banner-brand__wrapper {
+  
   position: relative;
   overflow: hidden; /* 避免伪元素放大溢出 */
 }
@@ -76,9 +77,19 @@ body {
   100% {
     filter: blur(0px);
   }
-  
 }
-
+ /*手机端适配（屏幕宽度 < 768px） */
+@media (max-width: 768px) {
+  .banner-brand__wrapper{
+    /* 调整背景图位置：左侧偏移10%，顶部偏移20%（可根据实际效果修改数值） */
+    /*margin-top: 200px;*/
+    /*background-position: 10% 20%;*/
+    /* 可选：调整背景图大小，避免拉伸变形 */
+    /*background-size: contain; !* 或 cover / 具体尺寸（如 120% auto） *!*/
+    /*max-width: 95% !important; !* 几乎占满屏幕宽度 *!*/
+    padding: 20%;
+  }
+}
 
 
 
