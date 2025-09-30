@@ -27,12 +27,12 @@ jobs:
       # 保证 dist 存在，然后加上 .nojekyll
       - name: Add .nojekyll
         run: |
-          mkdir -p docs/.vuepress/dist
-          touch docs/.vuepress/dist/.nojekyll
+          mkdir -p .vuepress/dist
+          touch .vuepress/dist/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/.vuepress/dist
+          publish_dir: ./.vuepress/dist
           enable_jekyll: false
