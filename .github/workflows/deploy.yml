@@ -1,16 +1,16 @@
-name: Deploy to GitHub Pages
+name: Deploy VuePress site to GitHub Pages
 
 on:
   push:
     branches:
-      - master   # 当推送到 master 时触发
+      - master   # 当推送到 master 分支时触发部署
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -21,11 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build VuePress
         run: npm run build
+
+      # 加一个 .nojekyll 文件，避免 GitHub Pages 误用 Jekyll 处理
+      - name: Add .nojekyll
+        run: echo > docs/.vuepress/dist/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/.vuepress/dist   # VuePress 构建目录
+          publish_dir: ./docs/.vuepress/dist
+          enable_jekyll: false   # 双保险：禁用 jekyll
