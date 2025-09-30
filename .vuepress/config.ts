@@ -4,6 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
+  base: '/vuepress/',
   head: [
     ['link', { rel: 'icon', href: '/YihuiLogo.ico' }] // 这里的路径是指向 public 目录下的文件
   ],
