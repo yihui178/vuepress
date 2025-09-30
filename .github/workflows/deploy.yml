@@ -24,13 +24,15 @@ jobs:
       - name: Build VuePress
         run: npm run build
 
-      # 加一个 .nojekyll 文件，避免 GitHub Pages 误用 Jekyll 处理
+      # 保证 dist 存在，然后加上 .nojekyll
       - name: Add .nojekyll
-        run: echo > docs/.vuepress/dist/.nojekyll
+        run: |
+          mkdir -p docs/.vuepress/dist
+          touch docs/.vuepress/dist/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
-          enable_jekyll: false   # 双保险：禁用 jekyll
+          enable_jekyll: false
