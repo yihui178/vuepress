@@ -8,6 +8,7 @@ tags:
  - Mysql
 categories:
  - 练习
+ - 项目实战
 ---
 
 # 按步骤完成一个 spring boot 项目搭建开发环境

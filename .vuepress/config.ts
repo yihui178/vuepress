@@ -11,7 +11,7 @@ export default defineUserConfig({
   description: "Just playing around",
   bundler: viteBundler(),
   // bundler: webpackBundler(),
-  
+
   theme: recoTheme({
     
     
@@ -39,13 +39,15 @@ export default defineUserConfig({
           children: [
             "test/doker/docker",
             "test/git/git",
-            "test/nvm/README1", 
-            "test/springboot/springboot"],
+            "test/nvm/README1"
+          ],
         },
-
         {
-          text: "模块",
-          children: ["home", "theme","api", "plugin"], 
+          text: "项目实战",
+          children: ["test/springboot/springboot",
+            "test/springboot/Swagger",
+            "test/springboot/MyBatis-Plus",
+          ],
         },
       ],
     },
