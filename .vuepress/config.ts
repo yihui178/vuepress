@@ -33,10 +33,12 @@ export default defineUserConfig({
     // colorModeSwitch: true, // 是否展示颜色模式开关，默认 true
 
     // series 为原 sidebar
+    // 主页内容由Demo\blogs\test控制
+    // 导航栏内
     series: {
       "/docs/theme-reco/": [
         {
-          text: "练习",
+          text: "练习",//导航栏内左侧边栏
           children: [
             "test/doker/docker",
             "test/git/git",
@@ -44,15 +46,17 @@ export default defineUserConfig({
           ],
         },
         {
-          text: "项目实战",
+          text: "项目实战",//导航栏内左侧边栏
           children: ["test/springboot/springboot",
             "test/springboot/Swagger",
             "test/springboot/MyBatis-Plus",
+            "test/springboot/Druid_CORS",
           ],
         },
       ],
     },
     navbar: [
+      //上导航栏
       { text: "主页", link: "/"},
       { text: "时间轴", link: "/timeline.html" },
       { text: "测试", link: "/categories/lianxi/1.html"},
@@ -60,7 +64,8 @@ export default defineUserConfig({
       {
         text: "练习",
         children: [
-          { text: "测试", link: "/docs/theme-reco/theme" },
+          // 上导航栏
+          { text: "测试", link: "/docs/theme-reco/test/springboot/springboot" },
           { text: "关于", link: "/blogs/other/guide" },
         ],
       }  

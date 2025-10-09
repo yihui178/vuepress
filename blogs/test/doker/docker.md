@@ -61,6 +61,27 @@ wsl --shutdown
 
   然后我们配置一下镜像源，国外的官方源太慢了。
 
+```
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "ipv6": false,
+  "registry-mirrors": [
+    "https://registry.docker-cn.com",
+    "https://docker.m.daocloud.io",
+    "https://mirror.ccs.tencentyun.com",
+    "https://hub-mirror.c.163.com"
+  ]
+}
+```
+
+
+
   ![image-20250915100049362](./images/image-20250915100049362.png)    
 
 
