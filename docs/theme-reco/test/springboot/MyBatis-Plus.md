@@ -3,6 +3,7 @@ title: MyBatis-Plus的配置与部署
 date: 2025-09-29
 tags:
  - MyBatis-Plus
+ - Springboot
 categories:
  - 练习
  - 项目实战

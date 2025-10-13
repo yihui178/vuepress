@@ -25,6 +25,10 @@ actionText: About
 actionLink: /views/other/about
 ---
 
+
+
+**预览**：[个人博客](https://yihui178.github.io/vuepress/)
+
 <!-- ## 快速开始
 
 **npx**
