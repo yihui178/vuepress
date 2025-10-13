@@ -6,12 +6,17 @@ import { webpackBundler } from '@vuepress/bundler-webpack'
 export default defineUserConfig({
   base: '/vuepress/',
   head: [
-    ['link', { rel: 'icon', href: '/YihuiLogo.ico' }] // 这里的路径是指向 public 目录下的文件
+    ['link', { rel: 'icon', href: '/YihuiLogo.ico' }], // 这里的路径是指向 public 目录下的文件
+    
   ],
   title: "忆\u200C回",
   description: "Just playing around",
   bundler: viteBundler(),
   // bundler: webpackBundler(),
+
+  
+
+
 
   theme: recoTheme({
     
@@ -32,7 +37,6 @@ export default defineUserConfig({
     // colorMode: 'pink', // dark, light, 默认 auto
     // colorModeSwitch: true, // 是否展示颜色模式开关，默认 true
 
-    // series 为原 sidebar
     // 主页内容由Demo\blogs\test控制
     // 导航栏内
     series: {
