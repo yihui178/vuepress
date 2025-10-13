@@ -273,7 +273,7 @@ public class SysUserController {
 
 ```
 
-### 6. 测试接口
+### 6、测试接口
 
 访问 Swagger UI 的地址：
 👉 http://localhost:8080/swagger-ui/index.html

@@ -11,7 +11,7 @@ categories:
 
 # Kaptcha 集成登录验证码
 
-### 1. **添加 Kaptcha 依赖**
+### 1、**添加 Kaptcha 依赖**
 
 在你的 `pom.xml` 文件中，已经添加了 `kaptcha` 依赖：
 
@@ -28,7 +28,7 @@ categories:
 
 这个依赖可以帮助你生成验证码图像。
 
-### 2. **创建验证码配置类**
+### 2、**创建验证码配置类**
 
 在项目中添加 `KaptchaConfig` 配置类，它的作用是配置生成验证码所需的参数。以下是该类的代码：
 
@@ -68,7 +68,7 @@ public class KaptchaConfig {
 
 
 
-### 3. **创建验证码生成接口**
+### 3、创建验证码生成接口
 
 你需要创建一个接口，用于处理前端验证码请求。这个接口负责生成验证码并返回给前端：
 
@@ -115,7 +115,7 @@ public class CaptchaController {
 
 ```
 
-### 4：Swagger UI 测试
+### 4、Swagger UI 测试
 
 打开 [Swagger UI ](http://localhost:8080/swagger-ui/index.html#/)并查看该接口：
 
