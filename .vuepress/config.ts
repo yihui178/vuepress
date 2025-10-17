@@ -58,6 +58,8 @@ export default defineUserConfig({
             "test/springboot/GlobalDataProcessing",
             "test/springboot/Excel导出",
             "test/springboot/Kaptcha",
+            "test/springboot/EasyExcel导出",
+            "test/springboot/Aj-Captcha验证码",
           ],
         },
       ],
