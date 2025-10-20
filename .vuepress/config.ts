@@ -60,6 +60,7 @@ export default defineUserConfig({
             "test/springboot/Kaptcha",
             "test/springboot/EasyExcel导出",
             "test/springboot/Aj-Captcha验证码",
+            "test/springboot/Preconditions参数校验功能",
           ],
         },
       ],
