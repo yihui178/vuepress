@@ -50,7 +50,7 @@ Spring Boot 3 集成后，可以非常方便地提供验证码 API 给前端（�
 ```yaml
 aj:
     captcha:
-        type: blockPuzzle       # 验证码类型: blockPuzzle(滑块) 或 clickWord(文字点选)
+#        type: blockPuzzle       # 验证码类型: blockPuzzle(滑块) 或 clickWord(文字点选)
         cache-type: local       # 缓存类型: local/redis
         expire-seconds: 120     # 验证码有效时间(秒)
         water-mark: '水印'   # 可选
@@ -88,6 +88,10 @@ public class CaptchaController {
     @PostMapping("/get")
     public ResponseModel get(@RequestBody CaptchaVO data, HttpServletRequest request) {
         data.setBrowserInfo(request.getRemoteAddr() + request.getHeader("user-agent"));
+        // 若前端未指定类型，默认使用滑块
+        if (data.getCaptchaType() == null) {
+            data.setCaptchaType("blockPuzzle");
+        }
         return captchaService.get(data);
     }
 
