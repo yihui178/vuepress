@@ -45,7 +45,7 @@ nvm 是一个 Node.js 的版本管理器，可以同时管理多个 Node.js 版�
    node_mirror: http://npmmirror.com/mirrors/node/
    npm_mirror: http://registry.npmmirror.com/mirrors/npm/
    ```
-   ![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/1.png)
+   ![](./images/1.png)
 
 ---
 
@@ -58,7 +58,7 @@ nvm 是一个 Node.js 的版本管理器，可以同时管理多个 Node.js 版�
   %NVM_HOME%
   %NVM_SYMLINK%
   ```
-  ![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/2.png)
+  ![](./images/2.png)
 
 #### 系统变量
 - 同样新增 `NVM_HOME` 和 `NVM_SYMLINK` 变量。
@@ -67,7 +67,7 @@ nvm 是一个 Node.js 的版本管理器，可以同时管理多个 Node.js 版�
   %NVM_HOME%
   %NVM_SYMLINK%
   ```
-   ![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/3.png)
+   ![](./images/3.png)
 
    完成后，打开终端，输入：
    ```bash
@@ -75,7 +75,7 @@ nvm 是一个 Node.js 的版本管理器，可以同时管理多个 Node.js 版�
    ```
    如果能输出版本号，则安装成功。
 
-   ![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/4.png)
+   ![](./images/4.png)
 
 ---
 
@@ -91,7 +91,7 @@ nvm 是一个 Node.js 的版本管理器，可以同时管理多个 Node.js 版�
    npm config set prefix "D:\nvm\node_global"
    npm config set cache "D:\nvm\node_cache"
    ```
-   ![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/5.png)
+   ![](./images/5.png)
 
 3. 配置用户变量：  
    在 `Path` 中新增：
@@ -119,37 +119,37 @@ nvm 是一个 Node.js 的版本管理器，可以同时管理多个 Node.js 版�
 nvm install 14.15.0
 nvm install <version>
 ```
-![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/6.png)
+![](./images/6.png)
 
 ### 3.2 卸载指定版本
 ```bash
 nvm uninstall <version>
 ```
-![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/7.png)
+![](./images/7.png)
 
 ### 3.3 切换使用指定版本
 ```bash
 nvm use <version>
 ```
-![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/8.png)
+![](./images/8.png)
 
 ### 3.4 列出所有已安装的版本
 ```bash
 nvm ls
 ```
-![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/9.png)
+![](./images/9.png)
 
 ### 3.5 显示当前正在使用的版本
 ```bash
 nvm current
 ```
-![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/10.png)
+![](./images/10.png)
 
 ### 3.6 显示所有可安装的 Node.js 版本
 ```bash
 nvm list available
 ```
-![](https://java-ai-178.oss-cn-beijing.aliyuncs.com/HBBTJ/11.png)
+![](./images/11.png)
 
 ---
 
